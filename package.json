@@ -68,7 +68,6 @@
     "@types/react-dom": "^19",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.3.2",
-    "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.31.0",
     "globals": "^17.4.0",
     "tailwindcss": "^4",
