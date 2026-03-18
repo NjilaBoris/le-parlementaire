@@ -47,7 +47,7 @@ async function Home({ searchParams }: RouteParams) {
   const election = filterByCategory(questions, "Election");
   return (
     <>
-      <section className="flex w-full min-h-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
+      <section className="flex w-full min-h-full flex-col-reverse justify-center gap-4 sm:flex-row sm:items-center">
         {questions?.[0] && <Hero {...questions[0]} key={questions[0]._id} />}
       </section>
       <section className="h-full w-full py-20 space-y-4">

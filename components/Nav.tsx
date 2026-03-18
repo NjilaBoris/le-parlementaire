@@ -128,7 +128,7 @@ const Mobile = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className={`${isOpen ? "bg-white" : "bg-[#CC0000]"} z-8  lg:hidden transition duration-200 ease-in p-2 h-full w-full`}
+      className={`${isOpen ? "bg-white" : "bg-[#CC0000]"} z-8 px-4  lg:hidden transition duration-200 ease-in p-2 h-full w-full`}
     >
       <div className="flex items-center   flex-col w-full h-full relative">
         <div className="flex relative items-center pb-2 justify-between h-full w-full">
@@ -202,7 +202,7 @@ const Mobile = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="min-w-dvw overflow-hidden  absolute h-dvh top-14 border-t border-neutral-100 z-10 flex flex-col gap-3 bg-white pl-5 pt-4 text-[1.5rem] md:text-[1.2rem] font-satoshi"
+              className="min-w-dvw overflow-hidden  absolute h-dvh top-14 border-t border-neutral-100 z-10 flex flex-col gap-2 bg-white pl-5 pt-4 text-[1.5rem] md:text-[1.2rem] font-satoshi"
             >
               {navItems.map((item, index) => (
                 <motion.div
@@ -228,7 +228,7 @@ const Mobile = () => {
                 >
                   <Link
                     href={item.route}
-                    className="text-[#565C68]"
+                    className="text-[#565C68] text-3xl"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}

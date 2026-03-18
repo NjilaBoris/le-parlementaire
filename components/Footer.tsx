@@ -30,13 +30,13 @@ export default function Footer() {
               in a flash—straight to your inbox.
             </p>
 
-            <div className="flex w-full items-center p-1 rounded-md  border-2  border-gray-700  max-w-md ">
+            <div className="flex max-sm:flex-wrap w-full items-center p-1 rounded-md  border-2  border-gray-700  max-w-sm ">
               <input
                 type="email"
                 placeholder="youremail@gmail.com"
                 className="flex-1 px-4 py-3 bg-transparent focus:bg-transparent outline-none  text-sm"
               />
-              <button className="bg-red-600  hover:bg-red-700 text-white px-6 py-3 rounded-sm text-sm font-medium transition">
+              <button className="bg-red-600 w-full  hover:bg-red-700 text-white px-6 py-3 rounded-sm text-sm font-medium transition">
                 Subscribe
               </button>
             </div>

@@ -16,7 +16,7 @@ const Hero = ({
 }: Question) => {
   return (
     <Link href={ROUTES.ARTICLE(_id)}>
-      <section className=" px-6 h-full  w-full  flex-col items-center">
+      <section className=" px-px h-full  w-full ">
         <div className="flex  flex-col md:max-w-2xl lg:max-w-5xl mx-auto   gap-10">
           <div className=" group mx-auto gap-3 flex flex-col max-lg:flex-col-reverse lg:flex-row items-center ">
             <div className="flex-1 group-hover:cursor-pointer">
@@ -34,7 +34,7 @@ const Hero = ({
                 </h1>
               </Link>
 
-              <p className="mt-6 line-clamp-3 text-gray-600 text-base md:text-lg leading-relaxed max-w-xl">
+              <p className="mt-6 line-clamp-3 text-gray-600 text-base md:text-lg leading-relaxed text-balance lg:max-w-xl">
                 {content}
               </p>
             </div>
