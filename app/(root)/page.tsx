@@ -27,7 +27,7 @@ async function Home({ searchParams }: RouteParams) {
 
   const { success, data, error } = await getQuestions({
     page: Number(page) || 1,
-    pageSize: Number(pageSize) || 10,
+    pageSize: Number(pageSize) || 60,
     query,
     filter,
   });
@@ -40,7 +40,11 @@ async function Home({ searchParams }: RouteParams) {
       ) ?? []
     );
   };
+  const electionQuestion = questions?.find((q) =>
+    q?.category?.includes("Election")
+  );
   const parliamentQuestions = filterByCategory(questions, "Politics");
+  const parliament = filterByCategory(questions, "Parliament");
   const governance = filterByCategory(questions, "Local Governance");
   const economy = filterByCategory(questions, "Economy & Society");
   const youth = filterByCategory(questions, "Youth Sportlight");
@@ -48,7 +52,11 @@ async function Home({ searchParams }: RouteParams) {
   return (
     <>
       <section className="flex w-full min-h-full flex-col-reverse justify-center gap-4 sm:flex-row sm:items-center">
-        {questions?.[0] && <Hero {...questions[0]} key={questions[0]._id} />}
+        {electionQuestion ? (
+          <Hero {...electionQuestion} key={electionQuestion._id} />
+        ) : (
+          <p className="text-gray-500 text-center">No article yet</p>
+        )}
       </section>
       <section className="h-full w-full py-20 space-y-4">
         <Title title="Paliament" id="parliament" />
@@ -67,7 +75,7 @@ async function Home({ searchParams }: RouteParams) {
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-500 py-10">No data yet</p>
+          <p className="text-center text-gray-500 py-10">No article yet</p>
         )}
       </section>
       <section className="h-full w-full py-10 space-y-4">
@@ -79,7 +87,7 @@ async function Home({ searchParams }: RouteParams) {
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-500 py-10">No data yet</p>
+          <p className="text-center text-gray-500 py-10">No article yet</p>
         )}
       </section>
       <section className="h-full w-full py-10 space-y-4">
@@ -91,7 +99,7 @@ async function Home({ searchParams }: RouteParams) {
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-500 py-10">No data yet</p>
+          <p className="text-center text-gray-500 py-10">No article yet</p>
         )}
       </section>
       <section className="h-full w-full py-10 space-y-4">
@@ -103,7 +111,7 @@ async function Home({ searchParams }: RouteParams) {
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-500 py-10">No data yet</p>
+          <p className="text-center text-gray-500 py-10">No article yet</p>
         )}
       </section>
       <section className="h-full w-full py-10 space-y-4">
@@ -115,7 +123,7 @@ async function Home({ searchParams }: RouteParams) {
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-500 py-10">No data yet</p>
+          <p className="text-center text-gray-500 py-10">No article yet</p>
         )}
       </section>
     </>
