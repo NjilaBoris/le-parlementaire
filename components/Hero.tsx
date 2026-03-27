@@ -40,14 +40,14 @@ const Hero = ({
             </div>
 
             <div className="flex-1 lg:flex-2 w-full h-full group-hover:cursor-pointer">
-              <div className="rounded-2xl overflow-hidden shadow-md ">
+              <div className="rounded-2xl overflow-hidden">
                 <Link href={ROUTES.ARTICLE(_id)}>
                   <Image
                     src={image}
                     width={800}
                     height={100}
                     alt="Small business owner"
-                    className="w-full h-fit! object-cover"
+                    className="w-full h-97! object-cover"
                   />
                 </Link>
               </div>

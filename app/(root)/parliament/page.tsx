@@ -19,7 +19,7 @@ const page = async ({ searchParams }: RouteParams) => {
   );
   return (
     <>
-      <section className="flex w-full min-h-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
+      <section className="flex w-full min-h-full flex-col-reverse justify-center gap-4 sm:flex-row sm:items-center">
         {parliamentQuestion && (
           <Hero {...parliamentQuestion} key={parliamentQuestion._id} />
         )}

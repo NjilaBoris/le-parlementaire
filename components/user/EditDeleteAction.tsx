@@ -31,10 +31,10 @@ const EditDeleteAction = ({ type, itemId }: Props) => {
   };
 
   const handleDelete = async () => {
-    if (type === "Article") {
+    if (type === "Question") {
       // Call API to delete question
       await deleteQuestion({ questionId: itemId });
-      toast.success("Question deleted", {
+      toast.success("Article deleted", {
         description: "Your article has been deleted successfully.",
         style: {
           backgroundColor: "#24a148",
@@ -47,7 +47,7 @@ const EditDeleteAction = ({ type, itemId }: Props) => {
       // Call API to delete answer
 
       toast("Answer deleted", {
-        description: "Your answer has been deleted successfully.",
+        description: "Your article has been deleted successfully.",
         style: {
           backgroundColor: "#24a148",
           color: "#fff",
@@ -82,8 +82,8 @@ const EditDeleteAction = ({ type, itemId }: Props) => {
             <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
             <AlertDialogDescription>
               This action cannot be undone. This will permanently delete your{" "}
-              {type === "Article" ? "article" : "answer"} and remove it from our
-              servers.
+              {type === "Question" ? "article" : "answer"} and remove it from
+              our servers.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

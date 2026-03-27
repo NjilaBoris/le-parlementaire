@@ -41,7 +41,7 @@ async function Home({ searchParams }: RouteParams) {
     );
   };
   const electionQuestion = questions?.find((q) =>
-    q?.category?.includes("Election")
+    q?.category?.includes("Politics")
   );
   const parliamentQuestions = filterByCategory(questions, "Politics");
   const parliament = filterByCategory(questions, "Parliament");

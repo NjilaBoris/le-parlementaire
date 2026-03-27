@@ -179,16 +179,6 @@ export async function deleteAnswer(
     // delete the answer
     await Answer.findByIdAndDelete(answerId);
 
-    // log the interaction
-    after(async () => {
-      await createInteraction({
-        action: "delete",
-        actionId: answerId,
-        actionTarget: "answer",
-        authorId: user?.id as string,
-      });
-    });
-
     revalidatePath(`/profile/${user?.id}`);
 
     return { success: true };

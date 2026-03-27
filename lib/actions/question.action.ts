@@ -344,16 +344,6 @@ export async function deleteQuestion(
 
     await Question.findByIdAndDelete(questionId).session(session);
 
-    // log the interaction
-    after(async () => {
-      await createInteraction({
-        action: "delete",
-        actionId: questionId,
-        actionTarget: "question",
-        authorId: user?.id as string,
-      });
-    });
-
     await session.commitTransaction();
     session.endSession();
 
