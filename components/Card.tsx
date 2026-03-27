@@ -19,7 +19,7 @@ export const Card = ({
         <div className="h-50 w-full flex-1">
           <Image
             src={image}
-            alt={image}
+            alt="loading picture"
             width={800}
             height={800}
             className="object-cover w-full h-full rounded-md"
