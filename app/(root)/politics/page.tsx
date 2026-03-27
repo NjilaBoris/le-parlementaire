@@ -17,7 +17,7 @@ const page = async ({ searchParams }: RouteParams) => {
   const parliamentQuestion = questions?.find((q) =>
     q?.category?.includes("Politics")
   );
-  const parliamentQuestions =
+  const politicsQuestions =
     questions?.filter((q) => q?.category?.includes("Politics")) ?? [];
   return (
     <>
@@ -29,9 +29,9 @@ const page = async ({ searchParams }: RouteParams) => {
         )}
       </section>
       <section className="h-full w-full py-10 space-y-4">
-        {parliamentQuestions.length > 0 ? (
+        {politicsQuestions.length > 0 ? (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            {parliamentQuestions.map((item) => (
+            {politicsQuestions.map((item) => (
               <Card {...item} key={item._id} />
             ))}
           </div>
